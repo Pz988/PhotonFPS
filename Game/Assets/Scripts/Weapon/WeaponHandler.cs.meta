@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4f807691e5c705c42bd687e3fda42e86
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Runner: {fileID: 7260786627530853101, guid: a6da5facb830376488fdec81e86486a3, type: 3}
+  - Object: {instanceID: 0}
+  - fireParticleSystem: {instanceID: 0}
+  - aimPoint: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
