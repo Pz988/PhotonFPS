@@ -32,6 +32,12 @@ public class CharacterMovementHandler : NetworkBehaviour
     {
         if (Object.HasInputAuthority)
         {
+            if (isRespawnRequested) 
+            {
+                Respawn();
+                return;
+            }
+
             //dont update player pos when dead
             if (hpHandler.isDead)
                 return;
@@ -67,8 +73,33 @@ public class CharacterMovementHandler : NetworkBehaviour
     void CheckFallRespawn()
     {
         if (transform.position.y < -12)
-            transform.position = Utils.GetRandomSpawnPoint();
-              
+        {
+            if (Object.HasInputAuthority)
+            {
+                Debug.Log($"{Time.time} Respawn due to fall outside of map bounds at {transform.position}");
+                Respawn();
+            }
+            
+             
+        }
+
+         
+    }
+
+    public void RequestRespawn()
+    {
+        isRespawnRequested = true;
+    }
+
+    void Respawn()
+    {
+        networkCharacterControllerPrototypeCustom.TeleportToPosition(Utils.GetRandomSpawnPoint());
+
+        hpHandler.OnRespawned(); //this can be done better with events or other case in future, im just lazy, will make better in future when framework updated.
+
+        isRespawnRequested = false;
+
+
     }
 
     public void SetCharacterControllerEnabled(bool isEnabled)

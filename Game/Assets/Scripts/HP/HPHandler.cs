@@ -16,7 +16,7 @@ public class HPHandler : NetworkBehaviour
 
     bool isInitialized = false;
 
-    const byte startingHP = 5;
+   byte startingHP = 5;
 
     public Color uiOnHitColor;
     public Image uiOnHitImage;
@@ -37,7 +37,7 @@ public class HPHandler : NetworkBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
+    void  Start()
     {
         HP = startingHP;
         isDead = false;
@@ -64,6 +64,12 @@ public class HPHandler : NetworkBehaviour
         }
     }
 
+    IEnumerator ServerReviveCO()
+    {
+        yield return new WaitForSeconds(2.0f);
+        characterMovementHandler.RequestRespawn();
+    }
+
 
     //Handled by Server to manage player damage
     public void OnTakeDamage()
@@ -78,6 +84,9 @@ public class HPHandler : NetworkBehaviour
         if (HP <= 0)
         {
             Debug.Log($"{Time.time} {transform.name} has died");
+
+            StartCoroutine(ServerReviveCO());
+
             isDead = true;
         }
     }
@@ -144,6 +153,14 @@ public class HPHandler : NetworkBehaviour
         hitboxRoot.HitboxRootActive = true;
         characterMovementHandler.SetCharacterControllerEnabled(true);
     }
+
+    public void OnRespawned()
+    {
+        //reset variables 
+        HP = startingHP;
+        isDead = false;
+    }
+
 }
        
     

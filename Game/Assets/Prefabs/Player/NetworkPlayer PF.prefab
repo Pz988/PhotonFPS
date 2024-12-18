@@ -220,7 +220,9 @@ MonoBehaviour:
   _isDead: 0
   uiOnHitColor: {r: 0, g: 0, b: 0, a: 0}
   uiOnHitImage: {fileID: 6896987535652397363}
-  bodyMeshRenderer: {fileID: 0}
+  bodyMeshRenderer: {fileID: 8719560514242682685}
+  playerModel: {fileID: 4309449276740019558}
+  deathGameObjectPrefab: {fileID: 646088669272340513, guid: 4dfce6a30692b8c43ab4b52ff9fe3877, type: 3}
 --- !u!1 &1305632172363824497
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,6 +415,7 @@ GameObject:
   - component: {fileID: 6595598397840708331}
   - component: {fileID: 1112983988826522333}
   - component: {fileID: 1123317161676429707}
+  - component: {fileID: 4832628979162759546}
   m_Layer: 6
   m_Name: Camera
   m_TagString: Untagged
@@ -501,6 +504,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraAnchorPoint: {fileID: 8419633765613678309}
+--- !u!114 &4832628979162759546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6448232530896247223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1001 &716498383077456084
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -684,6 +720,31 @@ ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 2407233068384943552, guid: b0fd4dc4ab23fe546a8641ddeacb0999, type: 3}
   m_PrefabInstance: {fileID: 2350414996970671575}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7310346265333387165 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5038904348734440010, guid: b0fd4dc4ab23fe546a8641ddeacb0999, type: 3}
+  m_PrefabInstance: {fileID: 2350414996970671575}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1483123145364004902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7310346265333387165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 1
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1001 &2889968057611728005
 PrefabInstance:
   m_ObjectHideFlags: 0

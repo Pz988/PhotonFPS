@@ -12,6 +12,15 @@ public class WeaponHandler : NetworkBehaviour
     public Transform aimPoint;
     public LayerMask collisionLayers;
 
+
+    //other components
+    HPHandler hpHandler;
+
+    private void Awake()
+    {
+       hpHandler = GetComponent<HPHandler>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +29,9 @@ public class WeaponHandler : NetworkBehaviour
 
     public override void FixedUpdateNetwork()
     {
+        if (hpHandler.isDead) 
+            return;
+
         //get input data from network
         if (GetInput(out NetworkInputData networkInputData))
         {

@@ -114,10 +114,10 @@
 -define:FUSION_HAS_MONO_CECIL
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
--r:"A:/FPSrepos/FPS/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll"
--r:"A:/FPSrepos/FPS/Library/PackageCache/com.unity.nuget.mono-cecil@1.10.2/Mono.Cecil.dll"
--r:"A:/FPSrepos/FPS/Library/PackageCache/com.unity.nuget.mono-cecil@1.10.2/Mono.Cecil.Pdb.dll"
--r:"A:/FPSrepos/FPS/Library/PackageCache/com.unity.nuget.mono-cecil@1.10.2/Mono.Cecil.Rocks.dll"
+-r:"A:/PhotonFPS/Game/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll"
+-r:"A:/PhotonFPS/Game/Library/PackageCache/com.unity.nuget.mono-cecil@1.10.2/Mono.Cecil.dll"
+-r:"A:/PhotonFPS/Game/Library/PackageCache/com.unity.nuget.mono-cecil@1.10.2/Mono.Cecil.Pdb.dll"
+-r:"A:/PhotonFPS/Game/Library/PackageCache/com.unity.nuget.mono-cecil@1.10.2/Mono.Cecil.Rocks.dll"
 -r:"A:/Program Files/2021.3.39f1/Editor/Data/Managed/Unity.CompilationPipeline.Common.dll"
 -r:"A:/Program Files/2021.3.39f1/Editor/Data/Managed/UnityEditor.Graphs.dll"
 -r:"A:/Program Files/2021.3.39f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
